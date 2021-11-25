@@ -1,6 +1,6 @@
-package com.delose.ttscloud.controller;
+package com.delose.tts.controller;
 
-import com.delose.ttscloud.domain.Article;
+import com.delose.tts.domain.Article;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

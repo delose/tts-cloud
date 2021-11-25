@@ -1,6 +1,5 @@
-package com.delose.ttscloud.domain;
+package com.delose.tts.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
