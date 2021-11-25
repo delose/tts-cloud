@@ -2,7 +2,7 @@
 microservice for text to speech
 
 ## Overview diagram
-![image info](./img/tts-backend-flow-diagram.png)
+![image info](./img/tts-backend-flow-diagram.jpg)
 
 ## Architecture
 - OPTION 1: CQRS (Command Query Responsibility Segregation) is used to separate erad and write operations; also aims to maintain a single source of truth
