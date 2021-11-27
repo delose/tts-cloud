@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TTS</title>
     </head>
 
     <body>
         <h1>Welcome</h1>
+        <form method="POST" th:action="@{/go-to-add-article}">
+            <button>Add article</button>
+        </form>
     </body>
 
 </html>

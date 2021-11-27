@@ -10,31 +10,32 @@
         <h1>Save an Article</h1>
         <form method="POST" th:object="${article}">
             <div class="grid">
-                <h3>group 1:</h3>
-                <div >
-                    <input name="summary" type="text" th:value="${article.summary}"/>
-                    <input name="country" type="text" th:value="${article.country}"/>
-                    <input name="author" type="text" th:value="${article.author}"/>
-                    <input name="link" type="text" th:value="${article.link}"/>
-                    <input name="language" type="text" th:value="${article.language}"/>
+                <h3>info 1:</h3>
+                <div>
+                    <input name="summary" type="text" th:value="${article.summary}" placeholder="summary"/>
+                    <input name="country" type="text" th:value="${article.country}" placeholder="countr"/>
+                    <input name="author" type="text" th:value="${article.author}" placeholder="author"/>
+                    <input name="link" type="text" th:value="${article.link}" placeholder="link"/>
+                    <input name="language" type="text" th:value="${article.language}" placeholder="language"/>
                 </div>
 
-                <h3>group 2:</h3>
+                <h3>info 2:</h3>
                 <div>
-                    <input name="media" type="text" th:value="${article.media}"/>
-                    <input name="title" type="text" th:value="${article.title}"/>
-                    <input name="mediaContent" type="text" th:value="${article.mediaContent}"/>
-                    <input name="cleanUrl" type="text" th:value="${article.cleanUrl}"/>
-                    <input name="rights" type="text" th:value="${article.rights}"/>
-                    <input name="rank" type="text" th:value="${article.rank}"/>
+                    <input name="media" type="text" th:value="${article.media}" placeholder="media"/>
+                    <input name="title" type="text" th:value="${article.title}" placeholder="title"/>
+                    <input name="mediaContent" type="text" th:value="${article.mediaContent}" placeholder="media content"/>
+                    <input name="cleanUrl" type="text" th:value="${article.cleanUrl}" placeholder="clean URL"/>
+                    <input name="rights" type="text" th:value="${article.rights}" placeholder="rights"/>
+                    <input name="rank" type="text" th:value="${article.rank}" placeholder="rank"/>
                 </div>
 
-                <h3>group 3:</h3>
+                <h3>info 3:</h3>
                 <div>
-                    <input name="topic" type="text" th:value="${article.topic}"/>
-                    <input name="publishedDate" type="text" th:value="${article.publishedDate}"/>
-                    <input name="id" type="text" th:value="${article.id}"/>
+                    <input name="topic" type="text" th:value="${article.topic}" placeholder="topic"/>
+                    <input name="publishedDate" type="text" th:value="${article.publishedDate}" placeholder="published date"/>
+                    <input name="id" type="text" th:value="${article.id}" placeholder="id"/>
                 </div>
+                <br/>
 
                 <button>Submit Article</button>
             </div>
