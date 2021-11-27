@@ -3,6 +3,8 @@ package com.delose.tts.domain;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * input data
  */
@@ -10,12 +12,14 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class Article {
 
+    @NotBlank(message="summary is required")
     private String summary;
     private String country;
     private String author;
     private String link;
     private String language;
     private String media;
+    @NotBlank(message="title is required")
     private String title;
     private String mediaContent;
     private String cleanUrl;

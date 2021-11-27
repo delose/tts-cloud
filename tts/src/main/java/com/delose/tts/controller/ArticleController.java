@@ -4,9 +4,12 @@ import com.delose.tts.domain.Article;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.validation.Valid;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -24,7 +27,13 @@ public class ArticleController {
     }
 
     @PostMapping
-    public String processArticle(Article article) {
+    public String processArticle(@Valid Article article, Errors errors) {
+
+        // validation
+        if (errors.hasErrors()) {
+            log.error("validation errors: {} ", errors.getAllErrors().toString());
+            return "article-display";
+        }
 
         log.info("saving article");
         return "redirect:/confirmation/save";

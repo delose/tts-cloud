@@ -12,7 +12,8 @@
             <div class="grid">
                 <h3>info 1:</h3>
                 <div>
-                    <input name="summary" type="text" th:value="${article.summary}" placeholder="summary"/>
+                    <input name="summary" type="text" th:value="${article.summary}" th:field="*{summary}" placeholder="summary"/>
+                    <span th:if="${#fields.hasErrors('summary')}" th:errors="*{summary}">Summary Error</span>
                     <input name="country" type="text" th:value="${article.country}" placeholder="country"/>
                     <input name="author" type="text" th:value="${article.author}" placeholder="author"/>
                     <input name="link" type="text" th:value="${article.link}" placeholder="link"/>
@@ -22,7 +23,8 @@
                 <h3>info 2:</h3>
                 <div>
                     <input name="media" type="text" th:value="${article.media}" placeholder="media"/>
-                    <input name="title" type="text" th:value="${article.title}" placeholder="title"/>
+                    <input name="title" type="text" th:value="${article.title}" th:field="*{title}" placeholder="title"/>
+                    <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title Error</span>
                     <input name="mediaContent" type="text" th:value="${article.mediaContent}" placeholder="media content"/>
                     <input name="cleanUrl" type="text" th:value="${article.cleanUrl}" placeholder="clean URL"/>
                     <input name="rights" type="text" th:value="${article.rights}" placeholder="rights"/>
