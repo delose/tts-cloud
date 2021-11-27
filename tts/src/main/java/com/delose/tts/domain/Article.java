@@ -24,4 +24,5 @@ public class Article {
     private String topic;
     private String publishedDate;
     private String id;
+
 }

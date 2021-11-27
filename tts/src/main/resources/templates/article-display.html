@@ -3,6 +3,43 @@
     xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Article</title>
+        <link rel="stylesheet" th:href="@{/styles.css}" />
     </head>
 
+    <body>
+        <h1>Save an Article</h1>
+        <form method="POST" th:object="${article}">
+            <div class="grid">
+                <h3>group 1:</h3>
+                <div >
+                    <input name="summary" type="text" th:value="${article.summary}"/>
+                    <input name="country" type="text" th:value="${article.country}"/>
+                    <input name="author" type="text" th:value="${article.author}"/>
+                    <input name="link" type="text" th:value="${article.link}"/>
+                    <input name="language" type="text" th:value="${article.language}"/>
+                </div>
+
+                <h3>group 2:</h3>
+                <div>
+                    <input name="media" type="text" th:value="${article.media}"/>
+                    <input name="title" type="text" th:value="${article.title}"/>
+                    <input name="mediaContent" type="text" th:value="${article.mediaContent}"/>
+                    <input name="cleanUrl" type="text" th:value="${article.cleanUrl}"/>
+                    <input name="rights" type="text" th:value="${article.rights}"/>
+                    <input name="rank" type="text" th:value="${article.rank}"/>
+                </div>
+
+                <h3>group 3:</h3>
+                <div>
+                    <input name="topic" type="text" th:value="${article.topic}"/>
+                    <input name="publishedDate" type="text" th:value="${article.publishedDate}"/>
+                    <input name="id" type="text" th:value="${article.id}"/>
+                </div>
+
+                <button>Submit Article</button>
+            </div>
+
+
+        </form>
+    </body>
 </html>
