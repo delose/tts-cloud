@@ -1,5 +1,6 @@
 package com.delose.tts.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -10,6 +11,7 @@ import javax.validation.constraints.NotBlank;
  */
 @Data
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class Article {
 
     @NotBlank(message="summary is required")
