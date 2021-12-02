@@ -8,6 +8,7 @@
     <body>
         <h1>Welcome</h1>
         <tr th:each="article: ${articles}">
+            <td th:text="${article.id}" />
             <td th:text="${article.summary}" />
             <td th:text="${article.country}" />
             <td th:text="${article.author}" />
@@ -21,7 +22,6 @@
             <td th:text="${article.rank}" />
             <td th:text="${article.topic}" />
             <td th:text="${article.publishedDate}" />
-            <td th:text="${article.id}" />
             <br/>
         </tr>
         <form method="POST" th:action="@{/go-to-add-article}">
