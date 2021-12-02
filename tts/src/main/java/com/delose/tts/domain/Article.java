@@ -29,6 +29,6 @@ public class Article {
     private String rank;
     private String topic;
     private String publishedDate;
-    private String id;
+    private Integer id;
 
 }

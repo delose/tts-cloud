@@ -1,6 +1,7 @@
 package com.delose.tts.controller;
 
 import com.delose.tts.domain.Article;
+import com.delose.tts.repository.ArticleRepository;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +20,12 @@ public class ArticleController {
 
     private static final Logger log = getLogger(ArticleController.class);
 
+    private final ArticleRepository articleRepository;
+
+    public ArticleController(ArticleRepository articleRepository) {
+        this.articleRepository = articleRepository;
+    }
+
     @GetMapping
     public String showArticle(Model model) {
         model.addAttribute("article", new Article());
@@ -34,6 +41,8 @@ public class ArticleController {
             log.error("validation errors: {} ", errors.getAllErrors().toString());
             return "article-display";
         }
+
+        this.articleRepository.save(article);
 
         log.info("saving article");
         return "redirect:/confirmation/save";

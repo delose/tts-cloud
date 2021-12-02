@@ -20,32 +20,32 @@ public class JdbcArticleRepository implements ArticleRepository {
 
     @Override
     public Iterable<Article> findAll() {
-        return jdbcTemplate.query("select * from Article",
+        return jdbcTemplate.query("select * from ARTICLE",
                 this::mapRowToArticle);
     }
 
     @Override
     public Article findOne(String id) {
-        return jdbcTemplate.queryForObject("select * from Article where id=?",
+        return jdbcTemplate.queryForObject("select * from ARTICLE where id=?",
                 this::mapRowToArticle, id);
     }
 
     @Override
     public Article save(Article article) {
-        jdbcTemplate.update("insert into Article (" +
-                "summary\n" +
-                "country\n" +
-                "author\n" +
-                "link\n" +
-                "language\n" +
-                "media\n" +
-                "title\n" +
-                "mediaContent\n" +
-                "cleanUrl\n" +
-                "rights\n" +
-                "rank\n" +
-                "topic\n" +
-                "publishedDate\n" +
+        jdbcTemplate.update("insert into ARTICLE (" +
+                "summary,\n" +
+                "country,\n" +
+                "author,\n" +
+                "link,\n" +
+                "language,\n" +
+                "media,\n" +
+                "title,\n" +
+                "mediaContent,\n" +
+                "cleanUrl,\n" +
+                "rights,\n" +
+                "rank,\n" +
+                "topic,\n" +
+                "publishedDate,\n" +
                 "id) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 article.getSummary(),
                 article.getCountry(),
@@ -80,7 +80,7 @@ public class JdbcArticleRepository implements ArticleRepository {
                 resultSet.getString("rank"),
                 resultSet.getString("topic"),
                 resultSet.getString("publishedDate"),
-                resultSet.getString("id")
+                resultSet.getInt("id")
         );
     }
 }
