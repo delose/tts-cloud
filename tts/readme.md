@@ -9,9 +9,11 @@
 - JDBC - Done
 - JPA
 - Domain as Entities
+- Security
 
 ## What's next: another microservice related to:
-- Security
+- API Gateway
+- Service Registry
 
 ## Current architecture
 - Traditional
