@@ -21,4 +21,7 @@
 ## Other module implementation
 - Event sourcing
 
+## Notes
+- Removing spring security feature and exploring Keycloak for authentication (Dec. 9, 2021)
+
 ***
