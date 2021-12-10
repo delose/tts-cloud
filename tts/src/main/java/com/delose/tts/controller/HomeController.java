@@ -38,7 +38,7 @@ public class HomeController {
         }
         log.info("number of articles: {} ", Integer.valueOf(articleList.size()));
         model.addAttribute("articles", articleList);
-        model.addAttribute("active", env.getActiveProfiles());
+        model.addAttribute("active", env.getActiveProfiles()[0]);
         log.info("display home");
         return "home";
     }
