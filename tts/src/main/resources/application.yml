@@ -8,3 +8,8 @@ logging:
       springframework:
         web: DEBUG
         thymeleaf: DEBUG
+
+spring:
+  profiles:
+    active:
+      - dev

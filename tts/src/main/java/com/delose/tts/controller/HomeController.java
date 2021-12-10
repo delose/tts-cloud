@@ -4,6 +4,8 @@ import com.delose.tts.domain.Article;
 import com.delose.tts.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +25,11 @@ public class HomeController {
         this.articleRepository = articleRepository;
     }
 
+    @Autowired
+    private Environment env;
+//    @Value("${spring.profiles.active}")
+//    private String activeProfile;
+
     @GetMapping("/")
     public String home(Model model) {
         List<Article> articleList = new ArrayList<>();
@@ -31,6 +38,7 @@ public class HomeController {
         }
         log.info("number of articles: {} ", Integer.valueOf(articleList.size()));
         model.addAttribute("articles", articleList);
+        model.addAttribute("active", env.getActiveProfiles());
         log.info("display home");
         return "home";
     }

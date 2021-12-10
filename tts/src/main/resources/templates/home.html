@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <h1>Welcome</h1>
+    <h1>Welcome: <span th:text="${active}"></span></h1>
         <tr th:each="article: ${articles}">
             <td th:text="${article.id}" />
             <td th:text="${article.summary}" />
