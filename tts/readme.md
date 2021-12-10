@@ -23,5 +23,6 @@
 
 ## Notes
 - Removing spring security feature and exploring Keycloak for authentication (Dec. 9, 2021)
+- committing change to spring feature/spring-security before reverting the code in master (Dec. 10, 2021)
 
 ***
