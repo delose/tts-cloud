@@ -7,4 +7,9 @@
 ## banner.txt
 - Spring automatically recognizes this file and displays the contents in the logs
 
+## 4 ways to configure properties
+- application.properties
+- application.yml
+- application command-line argument (e.g. java -jar tts-0.0.1.jar --server.port=9090) 
+- operating system environment variable (e.g. export SERVER_PORT=9090)
 ***

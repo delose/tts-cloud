@@ -9,6 +9,8 @@
 - JDBC - Done
 - JPA
 - Domain as Entities
+
+## Deferred feature:
 - Security
 
 ## What's next: another microservice related to:
