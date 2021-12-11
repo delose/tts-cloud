@@ -1,4 +1,4 @@
-package com.delose.tts.configuration;
+package com.delose.tts.cloud.tts.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

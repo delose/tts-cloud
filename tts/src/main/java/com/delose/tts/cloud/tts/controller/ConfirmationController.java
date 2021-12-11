@@ -1,4 +1,4 @@
-package com.delose.tts.controller;
+package com.delose.tts.cloud.tts.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package com.delose.tts.domain;
+package com.delose.tts.cloud.tts.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.delose.tts.controller;
+package com.delose.tts.cloud.tts.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.delose.tts;
+package com.delose.tts.cloud.tts;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

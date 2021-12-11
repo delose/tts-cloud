@@ -1,4 +1,4 @@
-package com.delose.tts;
+package com.delose.tts.cloud.tts;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
