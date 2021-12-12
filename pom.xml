@@ -24,13 +24,20 @@
 	<groupId>com.delose</groupId>
 	<artifactId>tts-cloud</artifactId>
 	<version>0.0.1</version>
+	<packaging>pom</packaging>
+
 	<name>tts-cloud</name>
 	<description>Demo project for Spring Boot - text to speech</description>
+	
 	<properties>
 		<java.version>11</java.version>
+		<!-- line 35-36 fixed the failing "mvn clean install" issue -->
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 	<modules>
 		<module>tts</module>
+		<module>service-registry</module>
 	</modules>
 	<dependencies>
 		<dependency>
@@ -38,6 +45,7 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
