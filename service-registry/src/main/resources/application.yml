@@ -2,15 +2,31 @@ server:
   port: 8761
 
 eureka:
+  dashboard:
+    enabled: true
+    path: /
+  instance:
+    hostname: localhost
   client:
     register-with-eureka: false
     fetch-registry: false
-    service-url:
-      default-zone: http://${eureka.instance.hostname}:${server.port}/eureka
-  instance:
-    hostname: localhost
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
   server:
     enable-self-preservation: false
+    waitTimeInMsWhenSyncEmpty: 5
+    healthcheck: true
+  statusPageUrl: http://localhost:8761/info
+  healthCheckUrl: http://localhost:8761/health
+  homePageUrl: http://localhost:8761/
+
+spring:
+  application:
+    name: eureka-server-tts
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
 
 logging:
   level:
