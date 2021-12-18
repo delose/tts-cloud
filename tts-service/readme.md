@@ -26,4 +26,19 @@
 ## Notes
 - Removing spring security feature and exploring Keycloak for authentication (Dec. 9, 2021)
 
+```bash
+# build code
+$ mvn clean package dockerfile:build
+
+# to execute docker-compose.yml
+$ docker-compose up
+
+```
+
+## Contact
+- For any comments, please email delossantos.eugene@gmail.com
+
+### Contributing
+- Feel free to send a PR to improve or fix any issue
+
 ***
