@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  ttsservice:
+    image: delose/ttsservice:0.0.1
+    ports:
+      - "9090:9090"
+    environments:
+      - "SPRING_PROFILES_ACTIVE=dev"
