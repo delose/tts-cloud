@@ -3,21 +3,23 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>com.delose</groupId>
-		<artifactId>tts-cloud</artifactId>
-		<version>0.0.1</version>
-	</parent>
-	<groupId>com.delose</groupId>
 	<artifactId>tts</artifactId>
 	<version>0.0.1</version>
-	<name>tts</name>
+	<name>TTS Service</name>
+	<packaging>jar</packaging>
 	<description>tts service</description>
+	<parent>
+		<groupId>com.delose</groupId>
+		<artifactId>ttscloud</artifactId>
+		<version>0.0.1</version>
+		<relativePath>..</relativePath>
+	</parent>
 	<properties>
 		<java.version>11</java.version>
 		<testcontainers.version>1.16.0</testcontainers.version>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
+		<spring-cloud.version>2021.0.0</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -53,10 +55,8 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -75,6 +75,13 @@
 				<groupId>org.testcontainers</groupId>
 				<artifactId>testcontainers-bom</artifactId>
 				<version>${testcontainers.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-parent</artifactId>
+				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
