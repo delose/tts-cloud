@@ -1,15 +1,13 @@
-package com.delose.ttscloud.serviceregistry;
+package com.delose.ttscloud.configserver;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class ServiceRegistryApplicationTests {
 
-	@Test
-//	@Disabled
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

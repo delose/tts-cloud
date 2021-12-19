@@ -23,11 +23,13 @@
 		<!-- line 35-36 fixed the failing "mvn clean install" issue -->
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
+		<docker.image.prefix>ttscloud</docker.image.prefix>
 	</properties>
 
 	<modules>
 		<module>service-registry</module>
 		<module>tts-service</module>
+		<module>configserver</module>
 	</modules>
 
 	<build>

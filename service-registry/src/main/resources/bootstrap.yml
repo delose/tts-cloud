@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service-registry
+  cloud:
+    config:
+      uri: http://configserver:8071
+    loadbalancer:
+      ribbon:
+        enabled: false
