@@ -1,7 +1,7 @@
-package com.delose.tts.cloud.tts.controller;
+package com.delose.ttscloud.ttsservice.controller;
 
-import com.delose.tts.cloud.tts.domain.Article;
-import com.delose.tts.cloud.tts.repository.ArticleRepository;
+import com.delose.ttscloud.ttsservice.domain.Article;
+import com.delose.ttscloud.ttsservice.repository.ArticleRepository;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

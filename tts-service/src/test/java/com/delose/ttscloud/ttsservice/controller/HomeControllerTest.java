@@ -1,6 +1,6 @@
-package com.delose.tts.cloud.tts.controller;
+package com.delose.ttscloud.ttsservice.controller;
 
-import com.delose.tts.cloud.tts.repository.ArticleRepository;
+import com.delose.ttscloud.ttsservice.repository.ArticleRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;

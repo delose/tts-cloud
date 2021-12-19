@@ -1,7 +1,7 @@
-package com.delose.tts.cloud.tts.controller;
+package com.delose.ttscloud.ttsservice.controller;
 
-import com.delose.tts.cloud.tts.domain.Article;
-import com.delose.tts.cloud.tts.repository.ArticleRepository;
+import com.delose.ttscloud.ttsservice.domain.Article;
+import com.delose.ttscloud.ttsservice.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;

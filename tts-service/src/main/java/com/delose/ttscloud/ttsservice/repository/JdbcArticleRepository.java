@@ -1,6 +1,6 @@
-package com.delose.tts.cloud.tts.repository;
+package com.delose.ttscloud.ttsservice.repository;
 
-import com.delose.tts.cloud.tts.domain.Article;
+import com.delose.ttscloud.ttsservice.domain.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

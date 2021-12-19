@@ -12,9 +12,9 @@ FROM openjdk:11-slim
 
 VOLUME /tmp
 
-ARG DEPENDECY=/target/dependency
+ARG DEPENDENCY=/target/dependency
 COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
 COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
 
-ENTRYPOINT ["java","-cp","app:app/lib/*","com.delose.tts.cloud.tts.TtsCloudApplication.java"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","TtsCloudApplication.java"]
