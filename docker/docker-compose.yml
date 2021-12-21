@@ -1,0 +1,43 @@
+version: '2.1'
+services:
+  configserver:
+    image: ttscloud/configserver:0.0.1
+    ports:
+      - "8071:8071"
+    environment:
+      ENCRYPT_KEY: "configserver"
+    networks:
+      backend:
+        aliases:
+          - "configserver"
+  eurekaserver:
+    image: ttscloud/serviceregistry:0.0.1
+    ports:
+      - "8070":"8070"
+    depends_on:
+#      database:
+#        condition: service_healthy
+      configserver:
+        condition: service_started
+    networks:
+      backend:
+        aliases:
+          - "eurekaserver"
+  ttsservice:
+    image: ttscloud/ttsservice:0.0.1
+    environment:
+      PROFILE: "dev"
+      CONFIGSERVER_URI: "http://configserver:8071"
+      CONFIGSERVER_PORT: "8071"
+      ENCRYPT_KEY: "TTSCLOUD"
+    depends_on:
+      configserver:
+        condition: service_started
+    ports:
+      - "9090:9090"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
