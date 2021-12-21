@@ -27,9 +27,9 @@
 	</properties>
 
 	<modules>
-		<module>service-registry</module>
 		<module>tts-service</module>
 		<module>configserver</module>
+		<module>service-registry</module>
 	</modules>
 
 	<build>
